@@ -38,7 +38,7 @@ function App() {
           <Route path='/register'>
             <Register></Register>
           </Route>
-          <Route path='*'>
+          <Route exact path='*'>
             <NotFound></NotFound>
           </Route>
         </Switch>
