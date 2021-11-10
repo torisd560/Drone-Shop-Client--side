@@ -10,6 +10,7 @@ import NotFound from '../src/Pages/NotFound/NotFound'
 import Header from './Pages/Shared/Header/Header';
 import Products from './Pages/Home/Products/Products';
 import PlaceOrders from '../src/Pages/PlaceOrders/PlaceOrders'
+import Gallery from '../src/Pages/Gallery/Gallery'
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path='/shopDrones'>
             <Products></Products>
+          </Route>
+          <Route path='/gallery'>
+            <Gallery></Gallery>
           </Route>
           <Route path='/placeOrder'>
             <PlaceOrders></PlaceOrders>

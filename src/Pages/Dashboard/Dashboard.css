@@ -1,0 +1,16 @@
+.dashbord a{
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 18px;
+    background: rgb(214, 213, 213);
+    color: #314584;
+    border-radius: 5px;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
+.dashbord a:hover{
+    background: transparent;
+    color: #dd34f3fd;
+    
+}

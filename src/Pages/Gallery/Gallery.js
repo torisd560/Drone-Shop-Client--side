@@ -11,7 +11,7 @@ import Work8 from '../../images/gallery/work-8.jpg'
 
 const Gallery = () => {
     return (
-        <Container style = {{margin : '100px'}}>
+        <Container style = {{margin : '100px'}} id ='gallery'>
             <p className='custom-text-pink fw-bold'>PHOTO GALLERY</p>
             <h1 className='custom-text-primary fw-bold mb-5'>Check Out Some of Our
                 <br /> Beautiful Moments.</h1>

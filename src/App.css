@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .App-logo {
@@ -24,6 +25,7 @@
 .custom-btn:hover{
   background: white;
   color : #dd34f3fd;
+  border : 2px solid #314584;
 }
 .custom-text-pink{
   color : #dd34f3fd;
