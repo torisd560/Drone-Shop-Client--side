@@ -15,7 +15,7 @@ const Product = (props) => {
                         {description.slice(0, 100)}.
                     </Card.Text>
                     <Link to='/placeOrder'>
-                        <Button className='custom-btn'>ORDER NOW</Button>
+                        <Button className='custom-btn'><i className="fas fa-paper-plane me-2"></i>ORDER NOW</Button>
                     </Link>
                 </Card.Body>
             </Card>
