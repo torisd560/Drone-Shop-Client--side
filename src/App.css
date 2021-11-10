@@ -1,10 +1,35 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.custom-text-primary{
+  color:  #314584;
+}
+
+.custom-btn{
+  background-color: #dd34f3fd;
+  font-weight: 600;
+  padding: 10px 20px;
+  color : white;
+  border:  0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.custom-btn:hover{
+  background: white;
+  color : #dd34f3fd;
+}
+.custom-text-pink{
+  color : #dd34f3fd;
+}
+p{
+  color: #959db5;
 }
 
 @media (prefers-reduced-motion: no-preference) {

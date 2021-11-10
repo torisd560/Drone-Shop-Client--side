@@ -4,15 +4,18 @@ import Home from '../src/Pages/Home/Home'
 import About from '../src/Pages/About/About'
 import Contact from '../src/Pages/Contact/Contact'
 import Dashboard from '../src/Pages/Dashboard/Dashboard'
-import MoreProducts from '../src/Pages/MoreProducts/MoreProducts'
 import Login from '../src/Pages/Login/Login/Login'
 import Register from '../src/Pages/Login/Register/Register'
 import NotFound from '../src/Pages/NotFound/NotFound'
+import Header from './Pages/Shared/Header/Header';
+import Products from './Pages/Home/Products/Products';
+import PlaceOrders from '../src/Pages/PlaceOrders/PlaceOrders'
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header></Header>
         <Switch>
           <Route exact path='/'>
             <Home></Home>
@@ -23,8 +26,11 @@ function App() {
           <Route path='/about'>
             <About></About>
           </Route>
-          <Route path='/moreProducts'>
-            <MoreProducts></MoreProducts>
+          <Route path='/shopDrones'>
+            <Products></Products>
+          </Route>
+          <Route path='/placeOrder'>
+            <PlaceOrders></PlaceOrders>
           </Route>
           <Route path='/dashboard'>
             <Dashboard></Dashboard>
