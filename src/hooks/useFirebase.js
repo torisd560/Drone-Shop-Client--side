@@ -7,7 +7,7 @@ initializeFirebase()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [error, setError] = useState('')
-    const [loading , setIsLoading] = useState(false)
+    const [isLoading , setIsLoading] = useState(true)
     const auth = getAuth()
 
 
@@ -106,6 +106,7 @@ const useFirebase = () => {
     return {
         user,
         error,
+        isLoading ,
         handleGoogleLogin,
         handleRegister,
         handleLogin,
