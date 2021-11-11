@@ -4,8 +4,12 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logoImg from '../../../images/logo.png'
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+
+    const { user, handleLogout } = useAuth()
+    console.log(user)
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
@@ -22,9 +26,15 @@ const Header = () => {
                         <Nav.Link as={Link} to='/dashboard' style={{ color: '#314584' }}>DASHBOARD</Nav.Link>
                         <Nav.Link as={HashLink} to='/home#gallery' style={{ color: '#314584' }}>GALLERY</Nav.Link>
                         <Nav.Link as={Link} to='/contact' style={{ color: '#314584' }}>CONTACT</Nav.Link>
-                        <Nav.Link as={Link} to='/login'>
-                            <Button className='custom-btn'>LOGIN</Button>
-                        </Nav.Link>
+                        {user?.email ? <>
+                            <span className='text-dark fw-bold me-3' style ={{marginLeft : '25px'}}>{user.displayName}</span>
+                            <Button onClick={handleLogout} className='custom-btn'>LogOut</Button>
+
+                        </>
+                            :
+                            <Nav.Link as={Link} to='/login'>
+                                <Button className='custom-btn'>LOGIN</Button>
+                            </Nav.Link>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

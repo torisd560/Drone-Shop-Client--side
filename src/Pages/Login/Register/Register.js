@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link  , useHistory} from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth'
 
 const Register = () => {
-
     const [registerData, setRegisterData] = useState({})
+    const { error, handleRegister } = useAuth()
+    const history = useHistory()
 
     const handleOnBlur = e => {
         const field = e.target.name
@@ -11,10 +13,11 @@ const Register = () => {
         const newRegisterData = { ...registerData }
         newRegisterData[field] = value
         setRegisterData(newRegisterData)
-        console.log(registerData)
+
     }
 
     const handleSubmit = e => {
+        handleRegister(registerData.email, registerData.password, registerData.name, history)
         e.preventDefault()
     }
 
@@ -27,7 +30,7 @@ const Register = () => {
                     <input
                         onBlur={handleOnBlur}
                         type="text"
-                        name="displayName"
+                        name="name"
                         className="form-control" required
                     />
                 </div>
@@ -53,7 +56,7 @@ const Register = () => {
 
                 <p className=' mt-4 text-center '>Already have an Account? <Link to='/login'> Please Login</Link> </p>
 
-                <p className='text-danger fw-bold text-center'></p>
+                <p className='text-danger fw-bold text-center'>{error}</p>
             </form>
         </div>
     );
