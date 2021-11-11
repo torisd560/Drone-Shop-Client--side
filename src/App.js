@@ -14,7 +14,7 @@ import Gallery from '../src/Pages/Gallery/Gallery'
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Router>
         <Header></Header>
         <Switch>

@@ -7,7 +7,7 @@ import TopBanner from './TopBanner/TopBanner';
 
 const Home = () => {
     return (
-        <div>
+        <div className = 'text-center'>
             <TopBanner></TopBanner>
             <Gallery></Gallery>
         </div>

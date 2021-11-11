@@ -1,0 +1,11 @@
+.login-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-field input{
+    width: 500px;
+    padding: 10px;
+    margin: 5px;
+}

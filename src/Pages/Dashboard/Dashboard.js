@@ -16,7 +16,7 @@ import Reviews from '../Dashboard/Reviews/Reviews'
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     return (
-        <div>
+        <div className = 'text-center'>
             <Navbar bg="dark" expand={false} variant="dark">
                 <Container>
                     <Navbar.Brand className = 'text-uppercase'>Dashboard</Navbar.Brand>

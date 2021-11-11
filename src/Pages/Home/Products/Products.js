@@ -12,7 +12,7 @@ const Products = () => {
     }, [])
 
     return (
-        <div style={{marginTop : '100px'}}>
+        <div style={{marginTop : '100px'}} className = 'text-center'>
             <h1 className='custom-text-primary fw-bold my-5 lh-sm' >Top RC Drones With a Camera
                 <br />
                 Updated With New Drone Models for 2021</h1>
