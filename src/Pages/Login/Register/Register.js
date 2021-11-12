@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link  , useHistory} from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth'
 
 const Register = () => {
@@ -13,12 +13,14 @@ const Register = () => {
         const newRegisterData = { ...registerData }
         newRegisterData[field] = value
         setRegisterData(newRegisterData)
+       
 
     }
 
     const handleSubmit = e => {
-        handleRegister(registerData.email, registerData.password, registerData.name, history)
         e.preventDefault()
+        handleRegister(registerData.email, registerData.password, registerData.name, history)
+      
     }
 
     return (

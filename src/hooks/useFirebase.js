@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import initializeFirebase from '../Pages/Firebase/firebase.init'
 
 initializeFirebase()
@@ -44,12 +44,16 @@ const useFirebase = () => {
                 const newUser = { email: email, displayName: name }
                 setUser(newUser)
 
+                //============ save user to database============
+                savedUser(email, name , 'POST')
+
                 updateProfile(auth.currentUser, {
                     displayName: name
-
+                   
                 })
+              
                     .then(() => {
-
+                        
                     })
                     .catch((error) => {
                         setError(error.message)
@@ -97,10 +101,37 @@ const useFirebase = () => {
         setIsLoading(true)
         signOut(auth)
             .then({
+            
 
             }).catch((error => setError(error.message)))
             .finally(() => setIsLoading(false))
     }
+
+    // =============== reset password ====================
+    const handleResetPassword = (email) => {
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                setError("")
+            })
+            .catch((error) => {
+                setError(error.message);
+
+            });
+
+    }
+
+    //==================== save user to database ==================
+    const savedUser = (email, displayName, method) =>{
+        const user = {email , displayName}
+       fetch(`http://localhost:5000/users`, {
+           method : method,
+           headers : {
+               'content-type' : 'application/json'
+           },
+           body : JSON.stringify(user)
+       })
+    }
+
 
     return {
         user,
@@ -111,7 +142,8 @@ const useFirebase = () => {
         handleGoogleLogin,
         handleRegister,
         handleLogin,
-        handleLogout
+        handleLogout,
+        handleResetPassword
     }
 };
 

@@ -7,12 +7,12 @@ import Dashboard from '../src/Pages/Dashboard/Dashboard'
 import Login from '../src/Pages/Login/Login/Login'
 import Register from '../src/Pages/Login/Register/Register'
 import NotFound from '../src/Pages/NotFound/NotFound'
-import Header from './Pages/Shared/Header/Header';
 import PlaceOrders from '../src/Pages/PlaceOrders/PlaceOrders'
 import Gallery from '../src/Pages/Gallery/Gallery'
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import MoreProducts from './Pages/MoreProducts/MoreProducts';
+import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (

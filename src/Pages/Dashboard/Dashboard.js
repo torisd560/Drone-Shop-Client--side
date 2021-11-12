@@ -19,7 +19,9 @@ const Dashboard = () => {
         <div className = 'text-center'>
             <Navbar bg="dark" expand={false} variant="dark">
                 <Container>
-                    <Navbar.Brand className = 'text-uppercase'>Dashboard</Navbar.Brand>
+                    <Navbar.Brand className = 'text-uppercase'>
+                        <Link to ='/'>Dashboard</Link>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas
                         id="offcanvasNavbar"

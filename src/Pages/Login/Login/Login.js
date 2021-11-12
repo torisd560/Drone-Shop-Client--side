@@ -6,7 +6,7 @@ import './Login.css'
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
-    const { error, handleLogin, handleGoogleLogin } = useAuth()
+    const { error, handleLogin, handleGoogleLogin, handleResetPassword } = useAuth()
     const location = useLocation()
     const history = useHistory()
 
@@ -55,7 +55,7 @@ const Login = () => {
                     </div>
 
                     <div>
-                        <p className='text-primary'> Forgot Password ? </p>
+                        <p onClick ={() =>handleResetPassword(loginData.email)} className='text-primary custom-cursor'> Forgot Password ? </p>
                         <Button type="submit" className=" custom-btn me-3 rounded-3 mt-2">Login</Button>
                         <Button onClick = {signInWithGoogle} variant="warning" className=' btn btn-warning me-3'><i className="fab fa-google text-white fs-5 px-4 "></i></Button>
                         <p className=' mt-4'>Don't have an account?<Link to='/register'> Sign Up</Link></p>
