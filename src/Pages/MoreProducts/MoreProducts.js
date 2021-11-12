@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Spinner } from 'react-bootstrap';
-import useAuth from '../../../hooks/useAuth';
-import Product from './Product/Product';
+import useAuth from '../../hooks/useAuth';
+import Product from '../Home/Products/Product/Product';
 
-const Products = () => {
+const MoreProducts = () => {
     const [products, setProducts] = useState([])
     const { isLoading } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch(`http://localhost:5000/moreProducts`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -33,4 +33,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default MoreProducts;

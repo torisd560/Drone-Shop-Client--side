@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const NotFound = () => {
 
     return (
-        <div >
+        <div className = 'text-center'>
             <img src={NotFoundImg} alt="" className='mt-5' />
             <h3 className='text-secondary'> Opps !! Sorry Page Not Found</h3>
             <Link to='/home'>

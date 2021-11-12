@@ -7,28 +7,29 @@ initializeFirebase()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [error, setError] = useState('')
-    const [isLoading , setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true)
+    const [alert, setAlert] = useState(false)
     const auth = getAuth()
 
 
     //===================== google sign in========================
     const googleProvider = new GoogleAuthProvider()
-    const handleGoogleLogin = (history, location) =>{
+    const handleGoogleLogin = (history, location) => {
 
         setIsLoading(true)
 
         signInWithPopup(auth, googleProvider)
-        .then((result) =>{
-            setUser(result.user)
-            const destination = location?.state?.from || '/'
-            history.push(destination)
-            setError("")
-        })
-        .catch((error) =>{
-            setError(error.message)
-        }).finally(() => setIsLoading(false))
-        
-        
+            .then((result) => {
+                setUser(result.user)
+                const destination = location?.state?.from || '/'
+                history.push(destination)
+                setError("")
+            })
+            .catch((error) => {
+                setError(error.message)
+            }).finally(() => setIsLoading(false))
+
+
     }
 
 
@@ -53,7 +54,7 @@ const useFirebase = () => {
                     .catch((error) => {
                         setError(error.message)
                     });
-                    setError("")
+                setError("")
             })
             .catch((error) => {
                 setError(error.message);
@@ -101,12 +102,12 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
     }
 
-
-
     return {
         user,
         error,
-        isLoading ,
+        isLoading,
+        alert,
+        setAlert,
         handleGoogleLogin,
         handleRegister,
         handleLogin,

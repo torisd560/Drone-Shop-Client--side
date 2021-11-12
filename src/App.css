@@ -14,21 +14,22 @@
 }
 
 .custom-btn{
-  background-color: #dd34f3fd;
+  background: linear-gradient(
+    335.64deg,#ff589b -19.22%,#ff136f 118.87%);
   font-weight: 600;
   padding: 10px 20px;
-  color : white;
+  color : #fff;
   border:  0;
   font-size: 14px;
   text-transform: uppercase;
 }
 .custom-btn:hover{
-  background: white;
-  color : #dd34f3fd;
-  border : 1px solid #314584;
+  background: transparent;
+  color :  #ff136f;
+
 }
 .custom-text-pink{
-  color : #dd34f3fd;
+  color : #ff136f;
 }
 p{
   color: #959db5;

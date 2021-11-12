@@ -23,11 +23,11 @@ const Header = () => {
                         <Nav.Link as={Link} to='/home' style={{ color: '#314584' }}>HOME</Nav.Link>
                         <Nav.Link as={Link} to='/about' style={{ color: '#314584' }}>ABOUT</Nav.Link>
                         <Nav.Link as={Link} to='/shopDrones' style={{ color: '#314584' }}>SHOP DRONES</Nav.Link>
-                        <Nav.Link as={Link} to='/dashboard' style={{ color: '#314584' }}>DASHBOARD</Nav.Link>
+                        {user.email && <Nav.Link as={Link} to='/dashboard' style={{ color: '#314584' }}>DASHBOARD</Nav.Link>}
                         <Nav.Link as={HashLink} to='/home#gallery' style={{ color: '#314584' }}>GALLERY</Nav.Link>
                         <Nav.Link as={Link} to='/contact' style={{ color: '#314584' }}>CONTACT</Nav.Link>
                         {user?.email ? <>
-                            <span className='text-dark fw-bold me-3' style ={{marginLeft : '25px'}}>{user.displayName}</span>
+                            <span className='text-dark fw-bold me-3' style={{ marginLeft: '25px' }}>{user.displayName}</span>
                             <Button onClick={handleLogout} className='custom-btn'>LogOut</Button>
 
                         </>

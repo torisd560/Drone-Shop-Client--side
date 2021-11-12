@@ -8,11 +8,11 @@ import Login from '../src/Pages/Login/Login/Login'
 import Register from '../src/Pages/Login/Register/Register'
 import NotFound from '../src/Pages/NotFound/NotFound'
 import Header from './Pages/Shared/Header/Header';
-import Products from './Pages/Home/Products/Products';
 import PlaceOrders from '../src/Pages/PlaceOrders/PlaceOrders'
 import Gallery from '../src/Pages/Gallery/Gallery'
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import MoreProducts from './Pages/MoreProducts/MoreProducts';
 
 function App() {
   return (
@@ -31,12 +31,12 @@ function App() {
               <About></About>
             </Route>
             <Route path='/shopDrones'>
-              <Products></Products>
+              <MoreProducts></MoreProducts>
             </Route>
             <Route path='/gallery'>
               <Gallery></Gallery>
             </Route>
-            <PrivateRoute path='/placeOrder'>
+            <PrivateRoute exact path='/moreProducts/placeOrder/:id'>
               <PlaceOrders></PlaceOrders>
             </PrivateRoute>
             <Route path='/dashboard'>
