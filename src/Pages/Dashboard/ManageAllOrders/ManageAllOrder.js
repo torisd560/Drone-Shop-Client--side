@@ -7,7 +7,7 @@ const ManageAllOrder = () => {
     const {isLoading }= useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://fast-plateau-38541.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -16,7 +16,7 @@ const ManageAllOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order?')
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://fast-plateau-38541.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -36,7 +36,7 @@ const ManageAllOrder = () => {
         status: 'Shipped'
     }
     const hanldeUpdate = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://fast-plateau-38541.herokuapp.com/orders/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

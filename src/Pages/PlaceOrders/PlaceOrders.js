@@ -40,7 +40,7 @@ const PlaceOrders = () => {
         }
         console.log(order)
 
-        fetch(`http://localhost:5000/orders`, {
+        fetch(`https://fast-plateau-38541.herokuapp.com/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const PlaceOrders = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/moreProducts/placeOrder/${id}`)
+        fetch(`https://fast-plateau-38541.herokuapp.com/moreProducts/placeOrder/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
 
@@ -71,7 +71,7 @@ const PlaceOrders = () => {
 
     return (
         <Container className='my-5'>
-            {alert && <Alert variant="success" className="my-5">
+            {alert && <Alert variant="success" className="my-5 w-50 mx-auto">
                 <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Placed order successfully
             </Alert>}
             <Row>

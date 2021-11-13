@@ -23,7 +23,7 @@ const useFirebase = () => {
             .then((result) => {
                 const user = result.user
                 setUser(user)
-                savedUser(user.email, user.displayName, 'PUT' )
+                savedUser(user.email, user.displayName, 'PUT')
                 const destination = location?.state?.from || '/'
                 history.push(destination)
                 setError("")
@@ -48,15 +48,15 @@ const useFirebase = () => {
                 setUser(newUser)
 
                 //============ save user to database============
-                savedUser(email, name , 'POST')
+                savedUser(email, name, 'POST')
 
                 updateProfile(auth.currentUser, {
                     displayName: name
-                   
+
                 })
-              
+
                     .then(() => {
-                        
+
                     })
                     .catch((error) => {
                         setError(error.message)
@@ -97,14 +97,14 @@ const useFirebase = () => {
             setIsLoading(false)
         })
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     //================= Log Out =========================
     const handleLogout = () => {
         setIsLoading(true)
         signOut(auth)
             .then({
-            
+
 
             }).catch((error => setError(error.message)))
             .finally(() => setIsLoading(false))
@@ -124,22 +124,22 @@ const useFirebase = () => {
     }
 
     //==================== save user to database ==================
-    const savedUser = (email, displayName, method) =>{
-        const user = {email , displayName}
-       fetch(`http://localhost:5000/users`, {
-           method : method,
-           headers : {
-               'content-type' : 'application/json'
-           },
-           body : JSON.stringify(user)
-       })
+    const savedUser = (email, displayName, method) => {
+        const user = { email, displayName }
+        fetch(`https://fast-plateau-38541.herokuapp.com/Fusers`, {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
     }
 
     //=================== get admin user  ====================
-    useEffect(() =>{
-        fetch(`http://localhost:5000/users/${user.email}`)
-        .then(res => res.json())
-        .then(data => setAdmin(data.admin))
+    useEffect(() => {
+        fetch(`https://fast-plateau-38541.herokuapp.com/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
     }, [user.email])
 
     return {

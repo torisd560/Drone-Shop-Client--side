@@ -7,7 +7,7 @@ const ManageProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/moreProducts')
+        fetch('https://fast-plateau-38541.herokuapp.com/moreProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -17,7 +17,7 @@ const ManageProducts = () => {
     const handleRemove = id => {
         const proceed = window.confirm('Are your sure ? you want to remove this Product')
         if (proceed) {
-            fetch(`http://localhost:5000/moreProducts/${id}`, {
+            fetch(`https://fast-plateau-38541.herokuapp.com/moreProducts/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

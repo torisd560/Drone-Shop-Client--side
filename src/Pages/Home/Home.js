@@ -2,7 +2,7 @@ import React from 'react';
 import Gallery from '../Gallery/Gallery';
 import Products from './Products/Products';
 import TopBanner from './TopBanner/TopBanner';
-import Header from '../../Pages/Shared/Header/Header'
+import HomeReviews from './HomeReviews/HomeReviews';
 
 
 
@@ -14,6 +14,7 @@ const Home = () => {
             <TopBanner></TopBanner>
             <Products></Products>
             <Gallery></Gallery>
+            <HomeReviews></HomeReviews>
         </div>
     );
 };

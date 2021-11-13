@@ -7,20 +7,20 @@ const MyOrders = () => {
     const { user, isLoading } = useAuth()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user.email}`)
+        fetch(`https://fast-plateau-38541.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [])
+    }, [user.email])
 
-    // if(isLoading){
-    //     return  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>
-    // }
+    if(isLoading){
+        return  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>
+    }
 
     //==============delete functon=====================
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order?')
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://fast-plateau-38541.herokuapp.com/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

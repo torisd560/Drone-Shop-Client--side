@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     }
 
     const handleSubmit = e => {
-        fetch(`http://localhost:5000/users/admin`, {
+        fetch(`https://fast-plateau-38541.herokuapp.com/users/admin`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

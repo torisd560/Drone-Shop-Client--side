@@ -17,10 +17,10 @@ import AdminRoute from '../AdminRoute/AdminRoute';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { admin  , isLoading} = useAuth()
-    
-    if(isLoading){
-        return  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>
+    const { admin, isLoading, handleLogout } = useAuth()
+
+    if (isLoading) {
+        return <div className='m-5 text-center'><Spinner animation="border" variant="warning" /></div>
     }
 
 
@@ -55,9 +55,7 @@ const Dashboard = () => {
                                         <Nav.Link as={Link} to={`${url}/reviews`}>Reviews</Nav.Link>
                                     </span>}
                             </Nav>
-                            <Link>
-                                <Button className='custom-btn' style={{ margin: '10px 20px', width: '200px' }}>LogOut</Button>
-                            </Link>
+                            <Button onClick={handleLogout} className='custom-btn' style={{ margin: '10px 20px', width: '200px' }}>LogOut</Button>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                 </Container>

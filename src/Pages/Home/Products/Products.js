@@ -8,7 +8,7 @@ const Products = () => {
     const { isLoading } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://fast-plateau-38541.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

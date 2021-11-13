@@ -6,7 +6,7 @@ import {Button }from 'react-bootstrap'
 const AddProduct = () => {
     const { register, handleSubmit , reset } = useForm();
     const onSubmit = data => {
-       fetch('http://localhost:5000/moreProducts', {
+       fetch('https://fast-plateau-38541.herokuapp.com/moreProducts', {
            method : 'POST',
            headers : {
                'content-type' : 'application/json'
