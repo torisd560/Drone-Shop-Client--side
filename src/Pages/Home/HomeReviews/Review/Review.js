@@ -1,44 +1,76 @@
-// import React from 'react';
+import React from 'react';
+import { Card, Col } from 'react-bootstrap';
+import reviewImg from '../../../../images/review.jpg'
+import './Review.css'
 
-// const Review = (props) => {
-//     const {name, email, reviews, ratings} = props.review
-//     return (
-//         <Carousel variant="dark">
-//   <Carousel.Item>
-//     <img
-//       className="d-block w-100"
-//       src="holder.js/800x400?text=First slide&bg=f5f5f5"
-//       alt="First slide"
-//     />
-//     <Carousel.Caption>
-//       <h5>First slide label</h5>
-//       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-//   <Carousel.Item>
-//     <img
-//       className="d-block w-100"
-//       src="holder.js/800x400?text=Second slide&bg=eee"
-//       alt="Second slide"
-//     />
-//     <Carousel.Caption>
-//       <h5>Second slide label</h5>
-//       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-//   <Carousel.Item>
-//     <img
-//       className="d-block w-100"
-//       src="holder.js/800x400?text=Third slide&bg=e5e5e5"
-//       alt="Third slide"
-//     />
-//     <Carousel.Caption>
-//       <h5>Third slide label</h5>
-//       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-//     </Carousel.Caption>
-//   </Carousel.Item>
-// </Carousel>
-//     );
-// };
+const Review = (props) => {
+    const { name, email, reviews, ratings } = props.review
+    return (
 
-// export default Review;
+        <Col>
+            <Card>
+                <div className = 'mx-auto mt-5'>
+                <Card.Img variant="top" src={reviewImg} className = 'img-fluid' style = {{ width: '100px'}}/>
+                </div>
+                <Card.Body>
+                    <Card.Title className = 'custom-text-primary fw-bold'>{name}</Card.Title>
+                    <h6>{email}</h6>
+                    <p>
+                                    {parseInt(ratings) === 5 &&
+                                        <div className="rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                        </div>
+                                    }
+                                    {parseInt(ratings) === 4 &&
+                                        <div className="rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                        </div>
+                                    }
+                                    {parseInt(ratings) === 3 &&
+                                        <div className="rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                        </div>
+                                    }
+                                    {parseInt(ratings) === 2 &&
+                                        <div className="rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                        </div>
+                                    }
+                                    {parseInt(ratings) === 1 &&
+                                        <div className="rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                            <i className="far fa-star"></i>
+                                            <i className="far fa-star"></i>
+
+                                        </div>
+                                    }
+                                </p>
+                    <Card.Text>
+                       {reviews}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </Col>
+
+    );
+};
+
+export default Review;

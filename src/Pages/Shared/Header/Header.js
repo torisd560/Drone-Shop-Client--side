@@ -26,7 +26,7 @@ const Header = () => {
                         <Nav.Link as={HashLink} to='/home#gallery' style={{ color: '#314584' }}>GALLERY</Nav.Link>
                         <Nav.Link as={Link} to='/contact' style={{ color: '#314584' }}>CONTACT</Nav.Link>
                         {user?.email ? <>
-                            <span className='text-dark fw-bold me-3' style={{ marginLeft: '25px' }}>{user.displayName}</span>
+                            <span className='text-dark fw-bold me-3' style={{ marginLeft: '25px' }}><i class="fas fa-user me-2"></i>{user.displayName}</span>
                             <Button onClick={handleLogout} className='custom-btn'>LogOut</Button>
 
                         </>
