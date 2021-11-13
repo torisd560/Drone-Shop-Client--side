@@ -29,7 +29,7 @@ const AddProduct = () => {
             {alert && <Alert variant="success" className="my-5 w-50 mx-auto">
                 <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Product added successfully
             </Alert>}
-            <form onSubmit={handleSubmit(onSubmit)} className='input-field'>
+            <form onSubmit={handleSubmit(onSubmit)} className='input-field w-50 mx-auto'>
                 <input {...register("name")} placeholder='Product Name' />
                 <input  {...register("description")} placeholder="Description" />
                 <input type="number" {...register("price")} placeholder='Price' />

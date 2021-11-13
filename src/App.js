@@ -2,25 +2,23 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../src/Pages/Home/Home'
 import About from '../src/Pages/About/About'
-import Contact from '../src/Pages/Contact/Contact'
 import Dashboard from '../src/Pages/Dashboard/Dashboard'
-import Login from '../src/Pages/Login/Login/Login'
 import Register from '../src/Pages/Login/Register/Register'
 import NotFound from '../src/Pages/NotFound/NotFound'
 import PlaceOrders from '../src/Pages/PlaceOrders/PlaceOrders'
 import Gallery from '../src/Pages/Gallery/Gallery'
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
-import MoreProducts from './Pages/MoreProducts/MoreProducts';
-import Header from './Pages/Shared/Header/Header';
+import ShopDrones from '../src/Pages/MoreProducts/ShopDrones/ShopDrones'
 import Footer from './Pages/Shared/Footer/Footer';
+import LoginItem from './Pages/Login/LoginItem';
+import ContactItem from './Pages/Contact/ContactItem/ContactItem';
 
 function App() {
   return (
     <div className="">
       <AuthProvider>
         <Router>
-          <Header></Header>
           <Switch>
             <Route exact path='/'>
               <Home></Home>
@@ -32,7 +30,7 @@ function App() {
               <About></About>
             </Route>
             <Route path='/shopDrones'>
-              <MoreProducts></MoreProducts>
+              <ShopDrones></ShopDrones>
             </Route>
             <Route path='/gallery'>
               <Gallery></Gallery>
@@ -44,10 +42,10 @@ function App() {
               <Dashboard></Dashboard>
             </Route>
             <Route path='/contact'>
-              <Contact></Contact>
+              <ContactItem></ContactItem>
             </Route>
             <Route path='/login'>
-              <Login></Login>
+              <LoginItem></LoginItem>
             </Route>
             <Route path='/register'>
               <Register></Register>

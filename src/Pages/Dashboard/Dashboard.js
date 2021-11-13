@@ -29,7 +29,7 @@ const Dashboard = () => {
             <Navbar bg="dark" expand={false} variant="dark">
                 <Container>
                     <Navbar.Brand className='text-uppercase'>
-                        <Link to='/'>Dashboard</Link>
+                        Dashboard
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas
@@ -60,6 +60,7 @@ const Dashboard = () => {
                     </Navbar.Offcanvas>
                 </Container>
             </Navbar>
+            <Link to='/'>Back To Home</Link>
             <Switch>
                 <Route path={`${path}/myOrders`}>
                     <MyOrders></MyOrders>

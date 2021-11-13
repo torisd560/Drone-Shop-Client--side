@@ -31,7 +31,7 @@ const Reviews = () => {
             </Alert>}
             <h1 className='custom-text-primary fw-bold my-5'>Add Your Feddback Here</h1>
 
-            <form onSubmit={handleSubmit(onSubmit)} className='input-field'>
+            <form onSubmit={handleSubmit(onSubmit)} className='input-field w-50 mx-auto'>
                 <input
                     type="text"
                     {...register("name")}

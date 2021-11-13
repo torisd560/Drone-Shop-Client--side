@@ -40,7 +40,7 @@ const MakeAdmin = () => {
 
             <form onSubmit={handleSubmit}>
                 <InputGroup
-                    className="my-5 w-50 mx-auto">
+                    className="my-5 w-75 mx-auto">
                     <FormControl
                         onBlur={handleAdmin}
                         placeholder=" candidate email address......... "

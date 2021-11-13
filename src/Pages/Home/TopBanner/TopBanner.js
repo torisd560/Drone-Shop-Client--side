@@ -17,7 +17,7 @@ const TopBanner = () => {
                     </Link>
                 </Col>
                 <Col xs={12} sm={12} md={6}>
-                    <img src={topBanner} alt="" style={{ width: '700px' }} />
+                    <img src={topBanner} alt="" className = 'img-fluid'/>
                 </Col>
             </Row>
         </Container>
