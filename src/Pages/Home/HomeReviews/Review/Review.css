@@ -1,3 +1,6 @@
 .rating{
     color : rgb(253, 92, 167)
 }
+.review-bg{
+    background-image: url('../../../../images//bannerBg.jpg');
+}
