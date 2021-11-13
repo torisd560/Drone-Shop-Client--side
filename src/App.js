@@ -13,6 +13,7 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import MoreProducts from './Pages/MoreProducts/MoreProducts';
 import Header from './Pages/Shared/Header/Header';
+import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

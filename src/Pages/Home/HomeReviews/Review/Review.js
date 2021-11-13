@@ -64,7 +64,7 @@ const Review = (props) => {
                                     }
                                 </p>
                     <Card.Text>
-                       {reviews}
+                       {reviews.slice(0,100)}
                     </Card.Text>
                 </Card.Body>
             </Card>

@@ -26,7 +26,7 @@ const Reviews = () => {
     };
     return (
         <div className='my-5'>
-             {alert && <Alert variant="success" className="my-5 w-50 mx-auto">
+            {alert && <Alert variant="success" className="my-5 w-50 mx-auto">
                 <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Review added successfully
             </Alert>}
             <h1 className='custom-text-primary fw-bold my-5'>Add Your Feddback Here</h1>
@@ -48,7 +48,7 @@ const Reviews = () => {
                     placeholder='Feedback' />
                 <input
                     type="number"
-                    {...register("ratings")}
+                    {...register("ratings", { min: 1, max: 5 })}
                     placeholder='Ratings'
                 />
                 <Button type="submit" className='custom-btn  mt-3'>Submit</Button>
