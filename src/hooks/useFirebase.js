@@ -6,6 +6,7 @@ initializeFirebase()
 
 const useFirebase = () => {
     const [user, setUser] = useState({})
+    const [admin, setAdmin] = useState({})
     const [error, setError] = useState('')
     const [isLoading, setIsLoading] = useState(true)
     const [alert, setAlert] = useState(false)
@@ -20,7 +21,9 @@ const useFirebase = () => {
 
         signInWithPopup(auth, googleProvider)
             .then((result) => {
-                setUser(result.user)
+                const user = result.user
+                setUser(user)
+                savedUser(user.email, user.displayName, 'PUT' )
                 const destination = location?.state?.from || '/'
                 history.push(destination)
                 setError("")
@@ -132,9 +135,16 @@ const useFirebase = () => {
        })
     }
 
+    //=================== get admin user  ====================
+    useEffect(() =>{
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+    }, [user.email])
 
     return {
         user,
+        admin,
         error,
         isLoading,
         alert,

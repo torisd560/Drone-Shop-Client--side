@@ -4,7 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const ManageAllOrder = () => {
     const [orders, setOrders] = useState([])
-    const isLoading = useAuth()
+    const {isLoading }= useAuth()
 
     useEffect(() => {
         fetch('http://localhost:5000/orders')
@@ -47,12 +47,14 @@ const ManageAllOrder = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data =>{
+              
+            })
     }
 
     return (
         <Container className='my-5'>
-            <h1 className='custom-text-primary fw-bold'>Manage All Orders</h1>
+            <h1 className='custom-text-primary fw-bold'>Manage All Orders {orders.length}</h1>
             <Table responsive="sm" className=' my-5'>
                 <thead>
                     <tr>
@@ -66,8 +68,7 @@ const ManageAllOrder = () => {
                 </thead>
                 <tbody>
                     {
-                        orders?.map((order, index) =>
-                            <tr>
+                        orders?.map((order, index) => <tr>
                                 <td>{index + 1}</td>
                                 <td>{order?.userName}</td>
                                 <td>{order?.email}</td>
@@ -75,10 +76,9 @@ const ManageAllOrder = () => {
                                 <td>
                                     <Button onClick={() => handleDelete(order._id)} variant="danger" className='bg-danger'>Cancel</Button>
                                 </td>
-                                <td className="d-flex align-items-center justify-content-center"><Badge bg="warning" className='custom-text-primary' style={{ padding: '12px' }}>Pending</Badge>
+                                <td className="d-flex align-items-center justify-content-center"><Badge bg="warning" className='custom-text-primary' style={{ padding: '12px' }}>{order.status}</Badge>
                                     <Button variant="outline-light"><i onClick={() => hanldeUpdate(order._id)} className="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></Button></td>
                             </tr>
-
                         )
 
                     }

@@ -60,7 +60,7 @@ const MyOrders = () => {
                                     <td>
                                         <Button onClick={() => handleDelete(order._id)} variant="danger" className='bg-danger'>Cancel</Button>
                                     </td>
-                                    <td className="d-flex align-items-center justify-content-center"><Badge bg="warning" className='custom-text-primary' style={{ padding: '12px' }}>Pending</Badge></td>
+                                    <td className="d-flex align-items-center justify-content-center"><Badge bg="warning" className='custom-text-primary' style={{ padding: '12px' }}>{order.status}</Badge></td>
                                 </tr>
                             )
                         }
