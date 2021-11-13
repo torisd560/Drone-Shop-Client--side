@@ -1,34 +1,61 @@
 import React, { useEffect, useState } from 'react';
 import './placeOrder.css'
 import { Card, Col, Container, Row, Button, Spinner, Alert } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth'
 
 const PlaceOrders = () => {
     const [product, setProduct] = useState({})
     const { id } = useParams()
-    const { user, isLoading, alert ,setAlert} = useAuth()
-    //============react hook form function for order box===================
-    const { register, handleSubmit ,reset } = useForm();
-    const onSubmit = data => {
-        console.log(data);
+    const { user, isLoading, alert, setAlert } = useAuth()
+
+    const initailOrdrData = {
+        userName: user.displayName,
+        email: user.email,
+        status: 'Pending',
+        phone: '',
+        address: ''
+
+    }
+    const [orderData, setOrderData] = useState(initailOrdrData)
+
+    const handleOnBlur = e => {
+        const field = e.target.name
+        const value = e.target.value
+        const newOrderData = { ...orderData }
+        newOrderData[field] = value
+        setOrderData(orderData)
+        console.log(orderData)
+    }
+
+
+    //============function for order box===================
+
+    const handleSubmit = e => {
+
+        const order = {
+            ...orderData,
+            productName: product.name,
+            price: product.price
+        }
+        console.log(order)
+
         fetch(`http://localhost:5000/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(order)
         })
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
                     setAlert(true)
-                   
+
                 }
             })
-            reset()
-        
+        e.preventDefault()
+
     }
 
     useEffect(() => {
@@ -44,8 +71,8 @@ const PlaceOrders = () => {
 
     return (
         <Container className='my-5'>
-           { alert && <Alert variant="success" className = "my-5">
-           <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Placed order successfully
+            {alert && <Alert variant="success" className="my-5">
+                <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Placed order successfully
             </Alert>}
             <Row>
                 <Col sm={12} md={7}>
@@ -61,37 +88,48 @@ const PlaceOrders = () => {
                     </Card>
                 </Col>
                 <Col Col sm={12} md={5} className='shadow-lg p-3'>
-                    <form onSubmit={handleSubmit(onSubmit)} className='order-field'>
+                    <form onSubmit={handleSubmit} className='order-field'>
                         <input
+                            onBlur={handleOnBlur}
                             className='custom-text-primary fs-5 fw-bold'
-                            defaultValue={product?.name}
-                            {...register("productName")}
+                            defaultValue={product.name}
+                            name='productName'
                         />
                         <input
+                            onBlur={handleOnBlur}
                             className='fs-5'
-                            defaultValue={product?.price}
-
-                            {...register("price")}
+                            defaultValue={product.price}
+                            name=' price'
                         />
                         <input
-                            defaultValue={user?.displayName}
-                            {...register("userName")}
+                            onBlur={handleOnBlur}
+                            defaultValue={user.displayName}
+                            name='userName'
 
                         />
-                        <input defaultValue={user?.email}
-                            {...register("email")}
+                        <input
+                            onBlur={handleOnBlur}
+                            defaultValue={user?.email}
+                            name='email'
 
                         />
-                        <input type="tel" {...register("phone")}
+                        <input
+                            onBlur={handleOnBlur}
+                            type="tel"
+                            name='phone'
                             placeholder="Phone Number"
                         />
                         <input
-                            type="text" {...register("address")}
-                            placeholder="Address" 
+                            onBlur={handleOnBlur}
+                            type="text"
+                            name='address'
+                            placeholder="Address"
                         />
                         <input
-                            type="text" {...register("status")}
-                            defaultValue = "Pending"
+                            onBlur={handleOnBlur}
+                            type="text"
+                            name='status'
+                            defaultValue="Pending"
                         />
                         <Button type="submit" className='custom-btn  mt-4'>Place Order</Button>
                     </form>

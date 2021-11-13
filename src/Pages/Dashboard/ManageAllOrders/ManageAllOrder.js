@@ -12,9 +12,6 @@ const ManageAllOrder = () => {
             .then(data => setOrders(data))
     }, [])
 
-    // if(isLoading){
-    //     return  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>
-    // }
     //==============delete functon=====================
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order?')
@@ -55,6 +52,7 @@ const ManageAllOrder = () => {
     return (
         <Container className='my-5'>
             <h1 className='custom-text-primary fw-bold'>Manage All Orders {orders.length}</h1>
+            {isLoading &&  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>}
             <Table responsive="sm" className=' my-5'>
                 <thead>
                     <tr>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css'
-import { Container, Nav, Offcanvas, Button } from 'react-bootstrap'
+import { Container, Nav, Offcanvas, Button, Spinner } from 'react-bootstrap'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom';
 import { Switch, Route, useRouteMatch } from "react-router-dom";
@@ -17,8 +17,12 @@ import AdminRoute from '../AdminRoute/AdminRoute';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth()
-    console.log(admin)
+    const { admin  , isLoading} = useAuth()
+    
+    if(isLoading){
+        return  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>
+    }
+
 
     return (
         <div className='text-center'>
