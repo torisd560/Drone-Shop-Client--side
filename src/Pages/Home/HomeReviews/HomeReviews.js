@@ -13,7 +13,7 @@ const HomeReviews = () => {
     return (
 
         <Container className = 'my-5'>
-            <h1 className='custom-text-primary fw-bold my-5'>Excellent Customer Reviews</h1>
+            <h1 className='custom-text-primary fw-bold my-5 text-uppercase'>Excellent Customer Reviews</h1>
             <Row xs={12} md={3} className="g-4">
                 {
                     reviews.map(review => <Review review={review} key={review._id}></Review>)

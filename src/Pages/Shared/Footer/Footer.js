@@ -1,10 +1,11 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='text-white mt-5'>
+        <div className='text-white mt-5 footer'>
                 <Row className = 'p-5' style={{ backgroundColor: '#202020' }}>
                     <Col sm={12} md={3}>
                         <h4 className='mb-5'>CONTACT US</h4>

@@ -15,9 +15,7 @@ const Products = () => {
 
     return (
         <div style={{ marginTop: '100px' }} className='text-center'>
-            <h1 className='custom-text-primary fw-bold my-5 lh-sm' >Top RC Drones With a Camera
-                <br />
-                Updated With New Drone Models for 2021</h1>
+            <h1 className='custom-text-primary fw-bold my-5 lh-sm' >DRONE PRODUCTS</h1>
             {isLoading ? <div className='m-5 text-center'><Spinner animation="border" variant="warning" /></div>
                 :
                 <>

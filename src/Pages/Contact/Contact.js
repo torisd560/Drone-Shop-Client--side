@@ -4,11 +4,11 @@ import './Contact.css'
 
 const Contact = () => {
     return (
-        <div className = 'contact-page'>
+        <div className='contact-page'>
             <Col className='page-top-banner text-white fw-bold px-5'>
-                <div className='text-center p-5'>
+                <div className='text-center py-5'>
                     <h1 >Contact Us</h1>
-                    <p><i className="fas fa-map-marker-alt me-2"></i>Home / Contact</p>
+                    <p className = 'text-white'><i className="fas fa-map-marker-alt me-2"></i>Home / Contact</p>
                 </div>
             </Col>
             <Container className='my-5 text-secondary'>
@@ -34,7 +34,7 @@ const Contact = () => {
                         <h2 className='text-dark fw-bold'>CONTACT INFORMATION</h2>
                         <p className='my-5'>Thank you for your interest in contacting Wikipedia. Before proceeding, some important disclaimers.</p>
                         < Row className='mt-5'>
-                            <Col xs={12} md={12} className = 'd-flex '>
+                            <Col xs={12} md={12} className='d-flex '>
                                 <div>
                                     <i className="fas fa-map-marker-alt me-4  custom-text-pink" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
                                 </div>
