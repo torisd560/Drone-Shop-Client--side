@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Button, Badge, Spinner } from 'react-bootstrap';
+import { Container, Table, Badge, Spinner } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth'
 
 const MyOrders = () => {
@@ -12,8 +12,8 @@ const MyOrders = () => {
             .then(data => setOrders(data))
     }, [user.email])
 
-    if(isLoading){
-        return  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>
+    if (isLoading) {
+        return <div className='m-5 text-center'><Spinner animation="border" variant="warning" /></div>
     }
 
     //==============delete functon=====================
@@ -36,10 +36,11 @@ const MyOrders = () => {
     }
 
     return (
-        <Container className='my-5'>
-            <h1 className='custom-text-primary fw-bold'>My Orders</h1>
-                <Table responsive="sm" className=' my-5'>
-                    <thead>
+        <div style={{ marginTop: '150px', marginBottom: '150px' }}>
+            <Container className='my-5 page-banner  p-5'>
+                <h1 className='  text-white fw-bold'>My Orders</h1>
+                <Table responsive="sm" className=' my-5 text-white'>
+                    <thead className='custom-text-pink'>
                         <tr>
                             <th>Serial No.</th>
                             <th>Name</th>
@@ -58,15 +59,19 @@ const MyOrders = () => {
                                     <td>{order?.email}</td>
                                     <td>{order?.productName}</td>
                                     <td>
-                                        <Button onClick={() => handleDelete(order._id)} variant="danger" className='bg-danger'>Cancel</Button>
+                                        <i onClick={() => handleDelete(order._id)} className="fas fa-trash-alt text-danger fs-5 custom-cursor"></i>
                                     </td>
-                                    <td className="d-flex align-items-center justify-content-center"><Badge bg="warning" className='custom-text-primary' style={{ padding: '12px' }}>{order.status}</Badge></td>
+                                    <td>{order.status === 'Shipped' ? <Badge bg="success" className='text-white  py-2 px-3'>{order.status}</Badge>
+                                        :
+                                        <Badge bg="warning" className='text-dark py-2 px-3'>{order.status}</Badge>
+                                    }</td>
                                 </tr>
                             )
                         }
                     </tbody>
                 </Table>
-        </Container>
+            </Container>
+        </div>
     );
 };
 

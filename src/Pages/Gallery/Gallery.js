@@ -13,7 +13,7 @@ const Gallery = () => {
     return (
         <div style = {{margin : '100px 0'}} id ='gallery'>
             <p className='custom-text-pink fw-bold'>PHOTO GALLERY</p>
-            <h1 className='custom-text-primary fw-bold mb-5'>LAST DRONE GALLERY</h1>
+            <h1 className='custom-text-dark fw-bold mb-5'>LAST DRONE GALLERY</h1>
             <Row>
                 <Col xs={12} sm={12} md={3} className = 'm-0 p-0'>
                     <img src={Work1} alt="" className='img-fluid' />

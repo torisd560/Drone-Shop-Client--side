@@ -1,26 +1,47 @@
 import React from 'react';
-import { Col, Row, Button, Container } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
-import topBanner from '../../../images/topBanner.png'
-
+import {  Carousel } from 'react-bootstrap'
+import slider1 from '../../../images/slider1.jpg'
+import slider2 from '../../../images/slider2.jpg'
+import slider3 from '../../../images/slide3.jpg'
 const TopBanner = () => {
     return (
-        <Container className='mb-5' style={{ marginTop: '140px' }}>
-            <Row>
-                <Col xs={12} sm={12} md={6} className='text-start'>
-                    <h1 className='custom-text-primary fw-bold' style={{ fontSize: '65px' }}>The Most
-                        <br /> Interesting Drone
-                        <br /> In The World.</h1>
-                    <p className='lh-lg my-4' style={{ fontSize: '20px' }}>For a start, these prolific manufacturers have fitted the Phantom 4 with DroCam Go, a fully-automated system that makes this drone a comprehensive tool.</p>
-                    <Link to='/moreProducts'>
-                        <Button className='custom-btn py-3'>Explore More</Button>
-                    </Link>
-                </Col>
-                <Col xs={12} sm={12} md={6}>
-                    <img src={topBanner} alt="" className = 'img-fluid'/>
-                </Col>
-            </Row>
-        </Container>
+        <Carousel fade>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={slider1}
+                    alt="First slide"
+                />
+                <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={slider2}
+                    alt="Second slide"
+                />
+
+                <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={slider3}
+                    alt="Third slide"
+                />
+
+                <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
     )
 };
 

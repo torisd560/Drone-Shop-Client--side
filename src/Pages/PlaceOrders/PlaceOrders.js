@@ -79,7 +79,7 @@ const PlaceOrders = () => {
                     <Card className='p-5 shadow-sm' >
                         <Card.Img variant="top" src={product.img} className='img-fluid' />
                         <Card.Body>
-                            <Card.Title className='custom-text-primary fw-bold'>{product.name}</Card.Title>
+                            <Card.Title className='custom-text-dark fw-bold'>{product.name}</Card.Title>
                             <h4 className='custom-text-pink'>$ {product.price}</h4>
                             <Card.Text className='lh-lg'>
                                 {product.description}
@@ -87,11 +87,12 @@ const PlaceOrders = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col Col sm={12} md={5} className='shadow-lg p-3'>
-                    <form onSubmit={handleSubmit} className='order-field'>
+                <Col Col sm={12} md={5} className='shadow-lg p-3  page-banner'>
+                    <h4 className = 'custom-text-pink text-center text-uppercase'>Confirm Order</h4>
+                    <form onSubmit={handleSubmit} className='order-field mt-4'>
                         <input
                             onBlur={handleOnBlur}
-                            className='custom-text-primary fs-5 fw-bold'
+                            className='custom-text-dark fs-5 fw-bold'
                             defaultValue={product.name}
                             name='productName'
                         />
@@ -131,7 +132,7 @@ const PlaceOrders = () => {
                             name='status'
                             defaultValue="Pending"
                         />
-                        <Button type="submit" className='custom-btn  mt-4'>Place Order</Button>
+                        <Button type="submit" className='custom-btn  mt-4'><i class="fas fa-shopping-cart me-2"></i>Place Order</Button>
                     </form>
                 </Col>
             </Row>

@@ -5,10 +5,8 @@
     justify-content: center;
 }
 .input-field input {
-    border-bottom: 1px solid #c0bebe ;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    width: 500px;
+    border: 0;
     padding: 15px;
+    margin: 15px;
+   
 }

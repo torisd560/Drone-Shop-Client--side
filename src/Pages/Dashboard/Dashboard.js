@@ -38,7 +38,7 @@ const Dashboard = () => {
                         placement="start"
                     >
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel" className='custom-text-primary fw-bold text-uppercase custom-text-pink'>Dashboard</Offcanvas.Title>
+                            <Offcanvas.Title id="offcanvasNavbarLabel" className='custom-text-dark fw-bold text-uppercase custom-text-pink'>Dashboard</Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3 dashbord">
@@ -55,7 +55,7 @@ const Dashboard = () => {
                                         <Nav.Link as={Link} to={`${url}/reviews`}>Reviews</Nav.Link>
                                     </span>}
                             </Nav>
-                            <Button onClick={handleLogout} className='custom-btn' style={{ margin: '10px 20px', width: '200px' }}>LogOut</Button>
+                            <Button onClick={handleLogout} className='custom-btn' style={{ margin: '10px 20px', width: '200px' }}><i className="fas fa-sign-out-alt me-2"></i>LogOut</Button>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                 </Container>

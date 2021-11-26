@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Button, Badge, Spinner } from 'react-bootstrap';
+import { Container, Table, Badge, Spinner } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 const ManageAllOrder = () => {
     const [orders, setOrders] = useState([])
-    const {isLoading }= useAuth()
+    const { isLoading } = useAuth()
 
     useEffect(() => {
         fetch('https://fast-plateau-38541.herokuapp.com/orders')
@@ -44,15 +44,15 @@ const ManageAllOrder = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data =>{
-              
+            .then(data => {
+
             })
     }
 
     return (
         <Container className='my-5'>
-            <h1 className='custom-text-primary fw-bold'>Manage All Orders {orders.length}</h1>
-            {isLoading &&  <div className = 'm-5 text-center'><Spinner animation="border" variant="warning" /></div>}
+            <h1 className='custom-text-dark fw-bold'>Manage All Orders {orders.length}</h1>
+            {isLoading && <div className='m-5 text-center'><Spinner animation="border" variant="warning" /></div>}
             <Table responsive="sm" className=' my-5'>
                 <thead>
                     <tr>
@@ -67,16 +67,22 @@ const ManageAllOrder = () => {
                 <tbody>
                     {
                         orders?.map((order, index) => <tr>
-                                <td>{index + 1}</td>
-                                <td>{order?.userName}</td>
-                                <td>{order?.email}</td>
-                                <td>{order?.productName}</td>
-                                <td>
-                                    <Button onClick={() => handleDelete(order._id)} variant="danger" className='bg-danger'>Cancel</Button>
-                                </td>
-                                <td className="d-flex align-items-center justify-content-center"><Badge bg="warning" className='custom-text-primary' style={{ padding: '12px' }}>{order.status}</Badge>
-                                    <Button variant="outline-light"><i onClick={() => hanldeUpdate(order._id)} className="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></Button></td>
-                            </tr>
+                            <td>{index + 1}</td>
+                            <td>{order?.userName}</td>
+                            <td>{order?.email}</td>
+                            <td>{order?.productName}</td>
+                            <td>
+                                <i onClick={() => handleDelete(order._id)} className="fas fa-trash-alt text-danger fs-5 custom-cursor"></i>
+                            </td>
+                            <td className="d-flex align-items-center justify-content-center">
+                                {order.status === 'Shipped' ? <Badge bg="success" className='text-white  py-3 px-4'>{order.status}</Badge>
+                                    :
+                                    <>
+                                        <Badge onClick={() => hanldeUpdate(order._id)} bg="warning" className=' text-dark py-2 px-3 custom-cursor' >{order.status}<i className="fas fa-check-circle m-1 fs-6 text-success"></i></Badge>
+                                    </>}</td>
+
+
+                        </tr>
                         )
 
                     }

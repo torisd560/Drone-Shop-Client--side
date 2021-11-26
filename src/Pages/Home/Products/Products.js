@@ -15,12 +15,12 @@ const Products = () => {
 
     return (
         <div style={{ marginTop: '100px' }} className='text-center'>
-            <h1 className='custom-text-primary fw-bold my-5 lh-sm' >DRONE PRODUCTS</h1>
+            <h1 className='custom-text-dark fw-bold my-5 lh-sm' >DRONE PRODUCTS</h1>
             {isLoading ? <div className='m-5 text-center'><Spinner animation="border" variant="warning" /></div>
                 :
                 <>
                     <Container className='my-5'>
-                        <Row xs={12} sm={12} md={3} className="g-3">
+                        <Row xs={12} sm={12} md={3} className="g-5">
                             {
                                 products.map(product => <Product product={product} key={product._id}></Product>)
                             }

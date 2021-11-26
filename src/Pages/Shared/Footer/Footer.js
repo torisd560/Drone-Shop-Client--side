@@ -43,7 +43,7 @@ const Footer = () => {
                             <input className='form-control border-1 border-light rounded-0 my-3 p-3' type="text" placeholder='Name' style={{ backgroundColor: 'transparent' }} />
                             <input className='form-control border-1 border-light rounded-0 my-3 p-3' type="email" placeholder='Email' style={{ backgroundColor: 'transparent' }} />
                             <textarea className='form-control  border-1 border-light rounded-0 my-3 p-3' type="text" placeholder='Message' style={{ backgroundColor: 'transparent' }} />
-                            <button className=' px-5 border-1 border-light rounded-0 my-3 p-3' type="submit" style={{ backgroundColor: 'transparent', color: 'white' }} >SUBMIT</button>
+                            <button className=' px-5 border-1 border-light rounded-0 my-3 p-3' type="submit" style={{ backgroundColor: 'transparent', color: 'white' }} ><i className="far fa-paper-plane me-3"></i>SUBMIT</button>
                         </div>
                     </Col>
                 </Row>

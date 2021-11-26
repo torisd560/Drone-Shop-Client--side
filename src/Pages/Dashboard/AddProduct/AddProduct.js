@@ -25,17 +25,36 @@ const AddProduct = () => {
     };
     return (
         <div>
-            <h1 className='custom-text-primary fw-bold my-5'>Add a product</h1>
+            <h1 className='custom-text-dark fw-bold my-5'>Add a product</h1>
             {alert && <Alert variant="success" className="my-5 w-50 mx-auto">
                 <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Product added successfully
             </Alert>}
-            <form onSubmit={handleSubmit(onSubmit)} className='input-field w-50 mx-auto'>
-                <input {...register("name")} placeholder='Product Name' />
-                <input  {...register("description")} placeholder="Description" />
-                <input type="number" {...register("price")} placeholder='Price' />
-                <input type="url" {...register("img")} placeholder='Image-Url' />
-                <Button className='custom-btn  mt-3' type="submit">Add Product</Button>
-            </form>
+            <div  className='page-banner w-75 mx-auto'> 
+                <form onSubmit={handleSubmit(onSubmit)} className='input-field p-5'>
+                    <input
+                        {...register("name")}
+                        placeholder='Product Name'
+                        className='w-75'
+                    />
+                    <input
+                        {...register("description")}
+                        placeholder="Description"
+                        className='w-75'
+                    />
+                    <input
+                        type="number"
+                        {...register("price")}
+                        placeholder='Price'
+                        className='w-75'
+                    />
+                    <input
+                        type="url" {...register("img")}
+                        placeholder='Image-Url'
+                        className='w-75'
+                    />
+                    <Button className='custom-btn  mt-3' type="submit">Add Product</Button>
+                </form>
+            </div>
         </div>
     );
 };

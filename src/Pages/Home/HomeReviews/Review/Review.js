@@ -7,13 +7,13 @@ const Review = (props) => {
     const { name, email, reviews, ratings } = props.review
     return (
 
-        <Col>
+        <Col className = 'py-5'>
             <Card>
                 <div className = 'mx-auto mt-5'>
                 <Card.Img variant="top" src={reviewImg} className = 'img-fluid' style = {{ width: '100px'}}/>
                 </div>
                 <Card.Body>
-                    <Card.Title className = 'custom-text-primary fw-bold'>{name}</Card.Title>
+                    <Card.Title className = 'custom-text-dark fw-bold'>{name}</Card.Title>
                     <h6>{email}</h6>
                     <p>
                                     {parseInt(ratings) === 5 &&

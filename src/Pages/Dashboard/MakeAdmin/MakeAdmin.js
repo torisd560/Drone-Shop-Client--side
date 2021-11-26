@@ -30,24 +30,27 @@ const MakeAdmin = () => {
     }
 
     return (
-        <div className='my-5'>
-            <h1 className='custom-text-primary fw-bold'>Make An Admin ?
+        <div >
+            <h1 className='custom-text-dark fw-bold my-5'>Make An Admin ?
                 <br /> Type Candidate Email Address Below</h1>
 
             {alert && <Alert variant="success" className="my-5">
                 <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Admin made successfully
             </Alert>}
 
-            <form onSubmit={handleSubmit}>
-                <InputGroup
-                    className="my-5 w-75 mx-auto">
-                    <FormControl
-                        onBlur={handleAdmin}
-                        placeholder=" candidate email address......... "
-                    />
-                    <Button type="submit" className='custom-btn' >Make Admin</Button>
-                </InputGroup>
-            </form>
+            <div className='page-banner w-75  mx-auto'>
+                <form onSubmit={handleSubmit} className='p-5'>
+                    <InputGroup
+                        className="my-5 w-100 mx-auto p-4">
+                        <FormControl
+                            onBlur={handleAdmin}
+                            placeholder='Type email ....'
+                            className='py-3 rounded-0'
+                        />
+                        <Button type="submit" className='custom-btn' >Make Admin</Button>
+                    </InputGroup>
+                </form>
+            </div>
         </div>
     );
 };

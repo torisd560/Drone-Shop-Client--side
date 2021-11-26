@@ -5,7 +5,7 @@ import './Contact.css'
 const Contact = () => {
     return (
         <div className='contact-page'>
-            <Col className='page-top-banner text-white fw-bold px-5'>
+            <Col className='page-banner text-white fw-bold px-5'>
                 <div className='text-center py-5'>
                     <h1 >Contact Us</h1>
                     <p className = 'text-white'><i className="fas fa-map-marker-alt me-2"></i>Home / Contact</p>
@@ -36,7 +36,7 @@ const Contact = () => {
                         < Row className='mt-5'>
                             <Col xs={12} md={12} className='d-flex '>
                                 <div>
-                                    <i className="fas fa-map-marker-alt me-4  custom-text-pink" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
+                                    <i className="fas fa-map-marker-alt me-4  custom-text-pink fs-4" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
                                 </div>
                                 <div>
                                     <h4 className='text-dark fw-bold mb-4'>Address</h4>
@@ -47,7 +47,7 @@ const Contact = () => {
                             </Col>
                             <Col xs={12} md={12} className='my-5 d-flex '>
                                 <div>
-                                    <i className="fas fa-envelope custom-text-pink me-4" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
+                                    <i className="fas fa-envelope custom-text-pink me-4 fs-4" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
                                 </div>
                                 <div>
                                     <h4 className='text-dark fw-bold mb-4'>Email Us</h4>
@@ -58,7 +58,7 @@ const Contact = () => {
                             </Col>
                             <Col xs={12} md={12} className='mb-5 d-flex '>
                                 <div>
-                                    <i class="fas fa-phone-alt custom-text-pink me-4" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
+                                    <i className="fas fa-phone-alt custom-text-pink me-4 fs-4" style={{ border: '2px solid black', borderRadius: '50%', padding: '20px' }}></i>
                                 </div>
                                 <div>
                                     <h4 className='text-dark fw-bold mb-4'>Call Us</h4>

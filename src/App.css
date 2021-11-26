@@ -9,30 +9,32 @@
   pointer-events: none;
 }
 
-.custom-text-primary{
-  color:  #363636;
+.custom-text-dark{
+  color:  #17181a;
 }
 
 .custom-btn{
-  background: linear-gradient(
-    335.64deg,#ff589b -19.22%,#ff136f 118.87%);
+  background: transparent;
+  color :  #ff136f;
+  border: 1px solid #ff136f;
   font-weight: 600;
-  padding: 10px 20px;
-  color : #fff;
-  border:  0;
+  padding: 10px 15px;
   font-size: 14px;
   text-transform: uppercase;
 }
 .custom-btn:hover{
-  background: transparent;
-  color :  #ff136f;
+  background: linear-gradient(
+    335.64deg,#ff589b -19.22%,#ff136f 118.87%);
+    color : #fff;
+    border: 0;
 
 }
 .custom-text-pink{
   color : #ff136f;
 }
 p{
-  color: #3e3f3f;
+  color: #444444;
+  font-size: 18px;
 }
 
 .custom-cursor{

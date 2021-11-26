@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Button, } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 
 
 
@@ -33,7 +33,7 @@ const ManageProducts = () => {
 
     return (
         <Container className='my-5'>
-            <h1 className='custom-text-primary fw-bold'>Manage All Products</h1>
+            <h1 className='custom-text-dark fw-bold'>Manage All Products</h1>
             <Table responsive="sm" className=' my-5'>
                 <thead>
                     <tr>
@@ -55,7 +55,7 @@ const ManageProducts = () => {
                                 <img src={product.img} alt="" className="img-fluid" style={{ width: '100px', height: '60px', background: 'lightgray', boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)' }} />
                             </td>
                             <td>
-                                <Button onClick={() => handleRemove(product._id)} variant="danger" className='bg-danger'>Remove</Button>
+                                <i onClick={() => handleRemove(product._id)} className="fas fa-trash-alt text-danger fs-5 custom-cursor"></i>
                             </td>
                         </tr>)
                     }
