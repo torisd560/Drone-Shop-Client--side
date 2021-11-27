@@ -52,11 +52,11 @@ const Footer = () => {
                     <Col sm={12} md={6}>
                         <p className = 'text-white' style = {{fontSize :'14px'}}>© 2021 ALL RIGHTS BY RESERVED DRONE STORE</p>
                     </Col>
-                    <Col sm={12} md={6} className = 'd-flex justify-content-around'  style = {{fontSize :'14px'}}>
-                        <Link to = '/home'><p className = 'text-white'>HOME</p></Link>
-                        <Link to ='/about'><p className = 'text-white'>ABOUT</p></Link>
-                        <Link to ='/moreProducts'> <p className = 'text-white'>SERVICES</p></Link>
-                        <Link to ='/'> <p className = 'text-white'>TERMS</p></Link>  
+                    <Col sm={12} md={6} className = 'd-flex justify-content-around'  style = {{fontSize :'13px'}}>
+                        <Link to = '/home'><span className = 'text-white'>HOME</span></Link>
+                        <Link to ='/about'><span className = 'text-white'>ABOUT</span></Link>
+                        <Link to ='/moreProducts'> <span className = 'text-white'>SERVICES</span></Link>
+                        <Link to ='/'> <span className = 'text-white'>TERMS</span></Link>  
                     </Col>
                 </Row>
         </div >
