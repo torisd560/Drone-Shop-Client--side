@@ -14,23 +14,21 @@
 }
 
 .custom-btn{
+  background: linear-gradient(
+    335.64deg,#fc8b6f -19.22%,#f65b47 118.87%);
+    color : #fff;
+    border: 0;
+}
+.custom-btn:hover{
   background: transparent;
-  color :  #ff136f;
-  border: 1px solid #ff136f;
+  color :  #f65b47;
   font-weight: 600;
-  padding: 10px 15px;
   font-size: 14px;
   text-transform: uppercase;
 }
-.custom-btn:hover{
-  background: linear-gradient(
-    335.64deg,#ff589b -19.22%,#ff136f 118.87%);
-    color : #fff;
-    border: 0;
 
-}
 .custom-text-pink{
-  color : #ff136f;
+  color : #f65b47;
 }
 p{
   color: #444444;
