@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../src/Pages/Home/Home'
-import About from '../src/Pages/About/About'
 import Dashboard from '../src/Pages/Dashboard/Dashboard'
 import NotFound from '../src/Pages/NotFound/NotFound'
 import Gallery from '../src/Pages/Gallery/Gallery'
@@ -13,6 +12,7 @@ import LoginItem from './Pages/Login/LoginItem';
 import ContactItem from './Pages/Contact/ContactItem/ContactItem';
 import RegisterItem from './Pages/Login/Register/RegisterItem/RegisterItem';
 import PlaceOrderItem from './Pages/PlaceOrders/PlaceOrderItem/PlaceOrderItem';
+import AboutItem from './Pages/About/AboutItem/AboutItem';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
               <Home></Home>
             </Route>
             <Route path='/about'>
-              <About></About>
+              <AboutItem></AboutItem>
             </Route>
             <Route path='/shopDrones'>
               <ShopDrones></ShopDrones>
