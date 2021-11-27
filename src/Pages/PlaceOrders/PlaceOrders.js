@@ -87,8 +87,7 @@ const PlaceOrders = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col Col sm={12} md={5} className='shadow-lg p-3  page-banner'>
-                    <h4 className = 'custom-text-pink text-center text-uppercase'>Confirm Order</h4>
+                <Col Col sm={12} md={5} className='shadow-lg'>
                     <form onSubmit={handleSubmit} className='order-field mt-4'>
                         <input
                             onBlur={handleOnBlur}

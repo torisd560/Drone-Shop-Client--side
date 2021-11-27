@@ -5,9 +5,10 @@
     align-items: center; 
 }
 .order-field input {
-    
+
     border: 0;
-    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    padding: 8px;
     width: 300px;
     margin: 10px;
 }

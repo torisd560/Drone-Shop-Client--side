@@ -12,7 +12,7 @@ const Product = (props) => {
                     <h5>{name}</h5>
                     <p className='custom-text-pink fw-bold fs-5'>$ {price}.00</p>
                     <Link to={`/moreProducts/placeOrder/${_id}`}>
-                        <Button className='custom-btn'><i className="fas fa-shopping-cart me-2"></i>ORDER NOW</Button>
+                        <Button variant="" className='custom-btn'><i className="fas fa-shopping-cart me-2"></i>ORDER NOW</Button>
                     </Link>
                 </div>
             </div>
