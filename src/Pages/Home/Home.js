@@ -10,7 +10,7 @@ import Header from '../Shared/Header/Header'
 
 const Home = () => {
     return (
-        <div className='text-center'>
+        <div className='text-center overflow-hidden'>
             <Header></Header>
             <TopBanner></TopBanner>
             <Products></Products>

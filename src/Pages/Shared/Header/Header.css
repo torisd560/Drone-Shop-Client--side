@@ -1,11 +1,25 @@
-.header a{
-    margin-left: 25px;
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header a, img, span {
+    margin-left: 20px;
     font-weight: 600;
     font-size: 14px;
 
    
 }
 .header a:focus{
-    border-bottom: 2px solid #ff136f;
+    border-bottom: 2px solid #f65b47;
 }
+.dashboard{
+    background: linear-gradient(
+    335.64deg,#ff8567 -19.22%,#f65b47 118.87%);
+    color : #fff;
+    font-size:  14px;
+    padding: 10px 26px;
+    border: 0;
+}
+
 

@@ -12,10 +12,9 @@ const TopBanner = () => {
                     src={slider1}
                     alt="First slide"
                 />
-                <Carousel.Caption className='text-start' style={{ top: '40%' }}>
+                <Carousel.Caption style={{ top: '40%', position: 'absolute' }}>
                     <h4 className='fw-bold custom-text-pink' style={{ fontSize: '25px' }}>Welcome To Dronet</h4>
-                    <h1 className='fw-bold' style={{ fontSize: '40px' }}>EXPLORE THE WORLD
-                        <br /> WITH NEW DRONE
+                    <h1 className='fw-bold' style={{ fontSize: '40px' }}>EXPLORE THE WORLD WITH NEW DRONE
                         <br /> TECHNOLOGY</h1>
                     <Button className=' custom-btn'>EXPLORE MORE</Button>
                 </Carousel.Caption>
@@ -27,10 +26,9 @@ const TopBanner = () => {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption className='text-start' style={{ top: '40%' }}>
+                <Carousel.Caption style={{ top: '40%', position: 'absolute' }}>
                     <h4 className='fw-bold custom-text-pink' style={{ fontSize: '25px' }}>Welcome To Dronet</h4>
-                    <h1 className='fw-bold' style={{ fontSize: '40px' }}>EXPLORE THE WORLD
-                        <br /> MOST POPULAR DRONE
+                    <h1 className='fw-bold' style={{ fontSize: '40px' }}>EXPLORE THE WORLD MOST POPULAR DRONE
                         <br /> TECHNOLOGY</h1>
                     <Button className=' custom-btn'>EXPLORE MORE</Button>
                 </Carousel.Caption>
@@ -42,10 +40,9 @@ const TopBanner = () => {
                     alt="Third slide"
                 />
 
-                <Carousel.Caption className='text-start' style={{ top: '40%' }}>
+                <Carousel.Caption style={{ top: '40%', position: 'absolute' }}>
                     <h4 className='fw-bold custom-text-pink' style={{ fontSize: '25px' }}>Welcome To Dronet</h4>
-                    <h1 className='fw-bold' style={{ fontSize: '40px' }}>OUR PROFFESSIONAL
-                        <br /> DRONE SERVICE
+                    <h1 className='fw-bold' style={{ fontSize: '40px' }}>OUR PROFFESSIONAL DRONE SERVICE
                         <br /> TECHNOLOGY</h1>
                     <Button className=' custom-btn'>EXPLORE MORE</Button>
                 </Carousel.Caption>

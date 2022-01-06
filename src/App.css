@@ -13,15 +13,15 @@
   color:  #17181a;
 }
 
-.custom-btn{
+/* .custom-btn{
   background: linear-gradient(
     335.64deg,#ff8567 -19.22%,#f65b47 118.87%);
     color : #fff;
     font-size:  14px;
     padding: 10px 15px;
     border: 0;
-}
-.custom-btn:hover{
+} */
+.custom-btn{
   background: transparent;
   color :  #f65b47;
   font-weight: 600;
