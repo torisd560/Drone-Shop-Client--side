@@ -19,4 +19,8 @@ Live link (https://drone-store-33087.web.app/).
 * Firebase-Authentication
 * React-Router.
 
+## Deploy : 
+* Heroku - server side
+* Firebase - client side
+
 
