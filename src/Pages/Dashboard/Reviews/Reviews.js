@@ -25,11 +25,11 @@ const Reviews = () => {
         reset()
     };
     return (
-        <div style={{ marginTop: '150px', marginBottom: '150px' }}>
+        <div>
             {alert && <Alert variant="success" className="my-5 w-50 mx-auto">
                 <i className="fas fa-check-circle ms-2 text-success fs-4"></i> Review added successfully
             </Alert>}
-            <h1 className='custom-text-dark fw-bold my-5'>Add Your Feddback Here</h1>
+            <h1 className='custom-text-dark fw-bold'>Add Your Feddback Here</h1>
 
             <div className='page-banner w-75 mx-auto'>
                 <form onSubmit={handleSubmit(onSubmit)} className='input-field p-5'>

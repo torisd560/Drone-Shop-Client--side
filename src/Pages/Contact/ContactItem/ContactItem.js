@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import Contact from '../Contact';
 
@@ -7,6 +8,7 @@ const ContactItem = () => {
         <div>
             <Header></Header>
             <Contact></Contact>
+            <Footer></Footer>
         </div>
     );
 };

@@ -12,35 +12,35 @@ const Team = () => {
             </div>
 
             <Container>
-                <Row className="g-4 text-center">
+                <Row xs={12} sm={12} md={3} className=" text-center b-0">
 
-                    <Col xs={12} sm={12} md={4}>
-                        <Card>
-                            <Card.Img variant="top" src={team1} />
-                            <Card.Body style={{ background: '#fdff39' }}>
-                                <Card.Title className='custom-text-dark fw-bold'>BEN AFFLECKS</Card.Title>
+                    <Col >
+                        <Card  >
+                            <Card.Img variant="top" src={team1} className='img-fluid' />
+                            <Card.Body>
+                                <Card.Title className='text-warning fw-bold'>BEN AFFLECKS</Card.Title>
                                 <Card.Text>
                                     FOUNDER / CEO
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={12} sm={12} md={4}>
-                        <Card>
-                            <Card.Img variant="top" src={team2} />
-                            <Card.Body style={{ background: '#fdff39' }}>
-                                <Card.Title className='custom-text-dark fw-bold'>TOM HANKS</Card.Title>
+                    <Col >
+                        <Card >
+                            <Card.Img variant="top" src={team2} className='img-fluid' />
+                            <Card.Body >
+                                <Card.Title className='text-warning fw-bold'>TOM HANKS</Card.Title>
                                 <Card.Text>
                                     FOUNDER
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col xs={12} sm={12} md={4}>
+                    <Col >
                         <Card>
-                            <Card.Img variant="top" src={team3} />
-                            <Card.Body style={{ background: '#fdff39' }}>
-                                <Card.Title className='custom-text-dark fw-bold'> JACK AFFLECKS</Card.Title>
+                            <Card.Img variant="top" src={team3} className='img-fluid' />
+                            <Card.Body>
+                                <Card.Title className='text-warning fw-bold'>JACK AFFLECKS</Card.Title>
                                 <Card.Text>
                                     PILOT
                                 </Card.Text>

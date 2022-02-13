@@ -5,8 +5,8 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='text-white mt-5 footer'>
-                <Row className = 'p-5' style={{ backgroundColor: '#202020' }}>
+        <div className='text-white mt-5 footer mx-0'>
+                <Row className = 'p-5 m-0' style={{ backgroundColor: '#202020' }}>
                     <Col sm={12} md={3}>
                         <h4 className='mb-5'>CONTACT US</h4>
                         <h5 className='mb-4'>Adress</h5>
@@ -48,7 +48,7 @@ const Footer = () => {
                     </Col>
                 </Row>
 
-                <Row className='px-5 py-3 text-white' style = {{backgroundColor:'rgb(22, 21, 21)'}}>
+                <Row className='px-5 py-3 m-0 text-white' style = {{backgroundColor:'rgb(22, 21, 21)'}}>
                     <Col sm={12} md={6}>
                         <p className = 'text-white' style = {{fontSize :'14px'}}>© 2021 ALL RIGHTS BY RESERVED DRONE STORE</p>
                     </Col>

@@ -36,11 +36,11 @@ const MyOrders = () => {
     }
 
     return (
-        <div style={{ marginTop: '150px', marginBottom: '150px' }}>
-            <Container className='my-5 page-banner  p-5'>
-                <h1 className='  text-white fw-bold'>My Orders</h1>
-                <Table responsive="sm" className=' my-5 text-white'>
-                    <thead className='custom-text-pink'>
+        <div>
+            <Container className='p-5'>
+                <h1 className='fw-bold custom-text-pink'>My Orders</h1>
+                <Table responsive="sm" className=' my-5'>
+                    <thead>
                         <tr>
                             <th>Serial No.</th>
                             <th>Name</th>
@@ -53,7 +53,7 @@ const MyOrders = () => {
                     <tbody>
                         {
                             orders?.map((order, index) =>
-                                <tr>
+                                <tr key={order._id}>
                                     <td>{index + 1}</td>
                                     <td>{order?.userName}</td>
                                     <td>{order?.email}</td>

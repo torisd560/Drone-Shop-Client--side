@@ -20,7 +20,7 @@ const Products = () => {
                 :
                 <>
                     <Container className='my-5'>
-                        <Row xs ={12} sm = {12} md={3} className="g-4">
+                        <Row xs={12} sm={12} md={3} className="g-4 m-0">
                             {
                                 products.map(product => <Product product={product} key={product._id}></Product>)
                             }

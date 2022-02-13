@@ -9,7 +9,7 @@ const Review = (props) => {
 
         <Col className = 'py-5'>
             <Card>
-                <div className = 'mx-auto mt-5'>
+                <div className = 'mx-auto'>
                 <Card.Img variant="top" src={reviewImg} className = 'img-fluid' style = {{ width: '100px'}}/>
                 </div>
                 <Card.Body>

@@ -13,9 +13,9 @@ const HomeReviews = () => {
 
     return (
 
-        <div className='my-5' >
+        <div className='my-5 mx-0' >
             <h1 className='custom-text-dark fw-bold text-uppercase'style = {{marginTop :'120px'}} >Excellent Customer Reviews</h1>
-            <Row xs={12} md={3} className="g-3  review-bg p-5 " style = {{marginTop :'120px', marginBottom: '120px'}}>
+            <Row xs={12} md={3} className="g-3 mx-0  review-bg p-5 " style = {{marginTop :'120px', marginBottom: '120px'}}>
 
                 {
                     reviews.map(review => <Review review={review} key={review._id}></Review>)
